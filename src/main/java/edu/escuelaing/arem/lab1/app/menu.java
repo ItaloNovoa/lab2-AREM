@@ -43,12 +43,12 @@ public class menu
                         System.out.println("ingrese la cantidad de datos");
                         int a =sn.nextInt();
                         for(int i=0;i<a;i++){
-                            li.añadir(sn.nextFloat());
+                            li.anadir(sn.nextFloat());
                         }
                         break;
                     case 2:
                         System.out.println("digite el nuevo dato");                                
-                        li.añadir(sn.nextFloat());
+                        li.anadir(sn.nextFloat());
                         break;
                     case 3:
                         try{

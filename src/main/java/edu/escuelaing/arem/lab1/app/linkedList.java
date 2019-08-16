@@ -15,10 +15,10 @@ public class linkedList {
     private Nodo cabeza;
     
     /**
-     * este metodo añade un elemento al final de la lista enlazada
+     * este metodo anade un elemento al final de la lista enlazada
      * @param data
      */
-    public void añadir(float data) {
+    public void anadir(float data) {
         if(cabeza == null) {
             cabeza = new Nodo(data);
             return;
@@ -32,10 +32,10 @@ public class linkedList {
     }
 
     /**
-     * este metodo se encarga de añadir un elemento al final de una lista enlazada
+     * este metodo se encarga de anadir un elemento al final de una lista enlazada
      * @param data
      */
-    public void AñadirAlFinal(float data) {
+    public void AnadirAlFinal(float data) {
     
         Nodo newCabeza = new Nodo(data);
         newCabeza.siguiente = cabeza;
