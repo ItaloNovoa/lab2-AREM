@@ -91,7 +91,7 @@ public class menu
      * @param ll ,este parametro corresponde a una lista enlazada
      * @return un flotante 
      */
-    private static float media(linkedList ll){
+    public static float media(linkedList ll){
         float media =ll.getCabeza().getData();
         int n=1;
         Nodo current=ll.getCabeza();
@@ -107,7 +107,7 @@ public class menu
      * @param ll likendList
      * @return flotante
      */
-    private static float desviacion(linkedList ll){
+    public static float desviacion(linkedList ll){
         float media =media(ll);
         int n=0;
         float desviacion=(ll.getCabeza().getData()-media)*(ll.getCabeza().getData()-media);
