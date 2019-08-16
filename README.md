@@ -25,4 +25,4 @@
 ##### 4. digitar el siguiente codigo 'mvn compile'
 ##### 5. y finalmente digitamos 'mvn exec:java -D exec.mainClass="edu.escuelaing.arem.lab1.app.menu"'
 # pruebas
-
+##### para poder ejecutar las pruebas se sigue hasta el paso 3 de ¿Como ejecutar el archivo? " en caso de no estar ya ubicado en la terminal,cmd o simbolo del sistema y digitar "mvn package"
