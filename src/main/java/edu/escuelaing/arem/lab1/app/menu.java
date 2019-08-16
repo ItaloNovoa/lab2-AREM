@@ -4,12 +4,17 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 /**
- *
+ * esta clase se encarga de ofrecer un menu con ciertas opciones de resultados estadisticos para un usuario
+ * a travez de un menu basico y facil de entender al usuario final
  * @author 2135142
  */
 
 public class menu 
 {
+    /**
+     * metodo principal de la clase el cual se encarga de ofrecer las distintas funciones estadisticas mostradas
+     * @param args
+     */
     public static void main(String[] args) {
                 
         Scanner sn = new Scanner(System.in);
@@ -25,8 +30,9 @@ public class menu
             System.out.println("2.ingresar nuevo dato");
             System.out.println("3.ver los datos ingresados");
             System.out.println("4.ver la media de los datos ingresados");
-            System.out.println("5.ver la desviacion estandar de los datos ingresados"); 
-            System.out.println("8. salir");
+            System.out.println("5.ver la desviacion estandar de los datos ingresados");
+            System.out.println("6. eliminar un dato ingresado"); 
+            System.out.println("7. salir");
           try {
  
                 System.out.println("Escribe una de las opciones");
@@ -37,14 +43,12 @@ public class menu
                         System.out.println("ingrese la cantidad de datos");
                         int a =sn.nextInt();
                         for(int i=0;i<a;i++){
-                            li.añadir(sn.nextFloat());
+                            li.aÃ±adir(sn.nextFloat());
                         }
-                        System.out.println(li);
                         break;
                     case 2:
                         System.out.println("digite el nuevo dato");                                
-                        li.añadir(sn.nextFloat());
-                        System.out.println(li);
+                        li.aÃ±adir(sn.nextFloat());
                         break;
                     case 3:
                         try{
@@ -61,9 +65,12 @@ public class menu
                         System.out.println("la media es igual a -> "+Float.toString(media(li)));
                         break;
                     case 5:
-                        System.out.println("la media es igual a -> "+Float.toString(desviacion(li)));
+                        System.out.println("la desviacion estandar es igual a -> "+Float.toString(desviacion(li)));
                         break;
                     case 6:
+                        System.out.println("ingrese el dato que desea eliminar");
+                        break;
+                    case 7:
                         System.out.println("Fin"); 
                         salir=true;
                         break;
@@ -78,6 +85,12 @@ public class menu
         }
         sn.close();  
     }
+
+    /**
+     * este metodo se encarga de sacar la media de una lista de datos previamente ingresada por el usuario
+     * @param ll ,este parametro corresponde a una lista enlazada
+     * @return un flotante 
+     */
     private static float media(linkedList ll){
         float media =ll.getCabeza().getData();
         int n=1;
@@ -89,7 +102,11 @@ public class menu
         }
         return (media/n);
     }
-    
+    /**
+     * este metodo se encarga de calcular la desviacion estandar de los datos previamente ingresados por el usuario
+     * @param ll likendList
+     * @return flotante
+     */
     private static float desviacion(linkedList ll){
         float media =media(ll);
         int n=0;

@@ -6,15 +6,19 @@
 package edu.escuelaing.arem.lab1.app;
 
 /**
- *
- * @author 2138850
+ *esta clase es una implementacion de una linkend list
+ * @author 2135142
  */
 
 public class linkedList {
     
     private Nodo cabeza;
     
-    public void a�adir(float data) {
+    /**
+     * este metodo añade un elemento al final de la lista enlazada
+     * @param data
+     */
+    public void añadir(float data) {
         if(cabeza == null) {
             cabeza = new Nodo(data);
             return;
@@ -26,15 +30,23 @@ public class linkedList {
         }
         act.siguiente = new Nodo(data);
     }
-    
-    public void A�adirAlFinal(float data) {
+
+    /**
+     * este metodo se encarga de añadir un elemento al final de una lista enlazada
+     * @param data
+     */
+    public void AñadirAlFinal(float data) {
     
         Nodo newCabeza = new Nodo(data);
         newCabeza.siguiente = cabeza;
         cabeza = newCabeza;
         
     }
-    
+
+    /**
+     * este metodo elimina el primer elemento que sea igual al del parametro
+     * @param data
+     */
     public void eliminar(float data) {
      
         if(cabeza == null) return;
@@ -53,11 +65,18 @@ public class linkedList {
         }        
     }
 
+    /**
+     * obtiene la cabeza o el primer elemento de la lista enlazada
+     * @return
+     */
     public Nodo getCabeza() {
         return cabeza;
     }
 
-    
+    /**
+     * cambia el nodo principal por el nodo ingresado
+     * @param head
+     */
     public void setcabeza(Nodo head) {
         this.cabeza = head;
     }

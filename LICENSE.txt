@@ -1,0 +1,5 @@
+Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+-- licencia de software libre sacada de http://www.gnu.org/licenses/gpl.html
