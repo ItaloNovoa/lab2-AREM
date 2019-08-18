@@ -1,15 +1,15 @@
-# lab2 de arem (media y desviacion estandar)
+# lab1 de arem (media y desviacion estandar)
 #
 ### este proyecto se encarga de ofrecer operaciones basicas para el manejo de datos a travez de un likendList 
 #
-### clases
+### Clases
 #
-#### menu --> es la clase con la que actua el usuario a travez de un menu de opciones que permite:
+#### Menu --> es la clase con la que actua el usuario a travez de un menu de opciones que permite:
 ##### 1. ingresar nueva coleccion de datos
-##### 2.ingresar nuevo dato
-##### 3.ver los datos ingresados
-##### 4.ver la media de los datos ingresados
-##### 5.ver la desviacion estandar de los datos ingresados
+##### 2. ingresar nuevo dato
+##### 3. ver los datos ingresados
+##### 4. ver la media de los datos ingresados
+##### 5. ver la desviacion estandar de los datos ingresados
 ##### 6. eliminar un dato ingresado
 ##### 7. salir
 #
