@@ -2,7 +2,7 @@ package edu.escuelaing.arem.lab1.app;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
-
+import java.io.*;
 /**
  * esta clase se encarga de ofrecer un menu con ciertas opciones de resultados estadisticos para un usuario
  * a travez de un menu basico y facil de entender al usuario final
@@ -16,74 +16,42 @@ public class menu
      * @param args
      */
     public static void main(String[] args) {
-                
-        Scanner sn = new Scanner(System.in);
-        boolean salir = false;
-        int opcion; //Guardaremos la opcion del usuario
+        File currentDirFile = new File("");
+        String helper = currentDirFile.getAbsolutePath();
+        System.out.println(helper);
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
         linkedList li=new linkedList();
-        
-        
- 
-        while (!salir) {
-            System.out.println("Calculadora estadistica para la media y desviacion estandar");
-            System.out.println("1. ingresar nueva coleccion de datos");
-            System.out.println("2.ingresar nuevo dato");
-            System.out.println("3.ver los datos ingresados");
-            System.out.println("4.ver la media de los datos ingresados");
-            System.out.println("5.ver la desviacion estandar de los datos ingresados");
-            System.out.println("6. eliminar un dato ingresado"); 
-            System.out.println("7. salir");
-          try {
- 
-                System.out.println("Escribe una de las opciones");
-                opcion = sn.nextInt();
- 
-                switch (opcion) {
-                    case 1:
-                        System.out.println("ingrese la cantidad de datos");
-                        int a =sn.nextInt();
-                        for(int i=0;i<a;i++){
-                            li.anadir(sn.nextFloat());
-                        }
-                        break;
-                    case 2:
-                        System.out.println("digite el nuevo dato");                                
-                        li.anadir(sn.nextFloat());
-                        break;
-                    case 3:
-                        try{
-                            Nodo current = li.getCabeza();
-                            System.out.println(current.getData());
-                            while(current.getSiguiente()!= null) {
-                                System.out.println(current.getSiguiente().getData());
-                                current = current.siguiente;
-                            }
-                        }catch(Exception e){
-                            System.out.println("Digite primero los datos");
-                        }
-                    case 4:
-                        System.out.println("la media es igual a -> "+Float.toString(media(li)));
-                        break;
-                    case 5:
-                        System.out.println("la desviacion estandar es igual a -> "+Float.toString(desviacion(li)));
-                        break;
-                    case 6:
-                        System.out.println("ingrese el dato que desea eliminar");
-                        break;
-                    case 7:
-                        System.out.println("Fin"); 
-                        salir=true;
-                        break;
-                        
-                    default:
-                        System.out.println("Solo nmeros entre 1 y 4");
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Debes insertar un numero");
-                sn.next();
-            }
-        }
-        sn.close();  
+
+      try {
+         // Apertura del fichero y creacion de BufferedReader para poder
+         // hacer una lectura comoda (disponer del metodo readLine()).
+         archivo = new File (helper+"\\entrada.txt");
+         fr = new FileReader (archivo);
+         br = new BufferedReader(fr);
+
+         // Lectura del fichero
+         String linea;
+         while((linea=br.readLine())!=null)
+            li.anadir(Float.parseFloat(linea));
+        System.out.println("la media es --> "+media(li));
+        System.out.println("la desviacion es --> "+desviacion(li));
+      }
+      catch(Exception e){
+         e.printStackTrace();
+      }finally{
+         // En el finally cerramos el fichero, para asegurarnos
+         // que se cierra tanto si todo va bien como si salta 
+         // una excepcion.
+         try{                    
+            if( null != fr ){   
+               fr.close();     
+            }                  
+         }catch (Exception e2){ 
+            e2.printStackTrace();
+         }
+      }
     }
 
     /**
