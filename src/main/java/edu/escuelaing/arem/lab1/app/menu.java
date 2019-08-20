@@ -1,6 +1,6 @@
 package edu.escuelaing.arem.lab1.app;
 
-import java.io.*;
+
 /**
  * esta clase se encarga de ofrecer un menu con ciertas opciones de resultados estadisticos para un usuario
  * a travez de un menu basico y facil de entender al usuario final
@@ -9,40 +9,8 @@ import java.io.*;
 
 public class menu 
 {
-    /**
-     * metodo principal de la clase el cual se encarga de ofrecer las distintas funciones estadisticas mostradas
-     * @param args
-     */
-    public static void main(String[] args) {
-        File currentDirFile = new File("");
-        String helper = currentDirFile.getAbsolutePath();
-        System.out.println(helper);
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        linkedList li=new linkedList();
+    public menu(){
 
-      try {
-         archivo = new File (helper+"\\entrada.txt");
-         fr = new FileReader (archivo);
-         br = new BufferedReader(fr);
-         String linea;
-         while((linea=br.readLine())!=null)
-            li.anadir(Float.parseFloat(linea));
-        System.out.println("la media es --> "+media(li));
-        System.out.println("la desviacion es --> "+desviacion(li));
-      }
-      catch(Exception e){
-         e.printStackTrace();
-      }finally{
-         try{                    
-            if( null != fr ){   
-               fr.close();     
-            }                  
-         }catch (Exception e2){ 
-            e2.printStackTrace();
-         }
-      }
     }
 
     /**
