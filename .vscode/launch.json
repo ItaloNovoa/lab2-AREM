@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Api",
+            "request": "launch",
+            "mainClass": "edu.escuelaing.arem.lab1.app.Api",
+            "projectName": "laboratorio1-app"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
