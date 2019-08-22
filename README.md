@@ -1,17 +1,13 @@
-# lab1 de arem (media y desviacion estandar)
+# lab2 de arem (media y desviacion estandar con Spark)
 #
-### este proyecto se encarga de ofrecer operaciones basicas para el manejo de datos a travez de un likendList 
+### este proyecto se encarga de ofrecer operaciones basicas para el manejo de datos a travez de una likendList por medio de Spark
 #
 ### Clases
 #
-#### Menu --> es la clase con la que actua el usuario a travez de un menu de opciones que permite:
-##### 1. ingresar nueva coleccion de datos
-##### 2. ingresar nuevo dato
-##### 3. ver los datos ingresados
-##### 4. ver la media de los datos ingresados
-##### 5. ver la desviacion estandar de los datos ingresados
-##### 6. eliminar un dato ingresado
-##### 7. salir
+#### Api --> Esta clase se encarga de recibir la informacion a travez de un api elaborado en spark y retornar la media y la desviacion.
+#### Ejemplo de entrada --> 13.0,16.0,17.0,18.0
+#
+#### Menu --> esta clase se encarga de calcular la media y la desviacion estandar
 #
 #### likendList --> esta clase implementa la funcionalidad de una lista enlazada
 #
@@ -23,6 +19,6 @@
 ##### 2. Ingresar a la cmd o simbolo del sistema
 ##### 3. Dentro de la cmd ingresar a la ubicacion en la cual esta el proyecto
 ##### 4. digitar el siguiente codigo 'mvn compile'
-##### 5. y finalmente digitamos 'mvn exec:java -D exec.mainClass="edu.escuelaing.arem.lab1.app.menu"'
+##### 5. y finalmente digitamos 'mvn exec:java -D exec.mainClass="edu.escuelaing.arem.lab1.app.Api"'
 # pruebas
 ##### para poder ejecutar las pruebas se sigue hasta el paso 3 de ¿Como ejecutar el archivo? " en caso de no estar ya ubicado en la terminal,cmd o simbolo del sistema y digitar "mvn package"
