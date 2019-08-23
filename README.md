@@ -22,3 +22,5 @@
 ##### 5. y finalmente digitamos 'mvn exec:java -D exec.mainClass="edu.escuelaing.arem.lab1.app.Api"'
 # pruebas
 ##### para poder ejecutar las pruebas se sigue hasta el paso 3 de ¿Como ejecutar el archivo? " en caso de no estar ya ubicado en la terminal,cmd o simbolo del sistema y digitar "mvn package"
+#Heroku 
+##### URL -->https://still-shelf-36877.herokuapp.com/inputdata
